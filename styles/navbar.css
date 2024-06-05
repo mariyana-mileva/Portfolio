@@ -1,0 +1,66 @@
+.menu-container {
+  position: fixed;
+  top: 10%;
+  right: 12%;
+  z-index: 10;
+}
+
+.menu-text {
+  cursor: pointer;
+  font-family: "Roboto", sans-serif;
+  font-size: 1.2em;
+  font-weight: 400;
+  color: var(--primary-text);
+}
+
+.nav-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  position: fixed;
+  top: 8.6%;
+  right: 17%;
+  padding: 10px 0;
+  gap: 20px;
+  z-index: 10;
+  opacity: 0;
+  width: 0;
+  overflow: hidden;
+  white-space: nowrap;
+  transition: width 0.3s ease, opacity 0.3s ease;
+}
+
+.menu-container:hover .nav-container {
+  width: 500px; /* Adjust width as needed */
+  opacity: 1;
+}
+
+.nav-container a {
+  position: relative;
+  text-decoration: none;
+  font-family: "Roboto", sans-serif;
+  font-size: 1.2em;
+  font-weight: 400;
+  color: var(--primary-text);
+  transition: color 0.3s ease;
+}
+
+.nav-container a::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  display: block;
+  background: var(--secondary-text);
+  transition: width 0.3s ease;
+  bottom: -5px;
+  left: 0;
+}
+
+.nav-container a:hover {
+  color: var(--highlight-color);
+}
+
+.nav-container a:hover::after {
+  width: 100%;
+}

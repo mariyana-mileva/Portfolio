@@ -1,0 +1,53 @@
+.credits {
+  position: absolute;
+  bottom: 9%;
+  left: 10%;
+}
+
+.credits p {
+  text-decoration: none;
+  font-family: "Roboto", sans-serif;
+  font-size: 0.9em;
+  font-weight: 500;
+  color: var(--secondary-text);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.center-image {
+  max-width: 70%;
+  max-height: 70%;
+  z-index: 1;
+}
+
+/* Moving text styling */
+.moving-text {
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  transform: translateY(-50%);
+  overflow: hidden;
+  white-space: nowrap;
+  z-index: 0;
+}
+
+.moving-text h1 {
+  display: inline-block;
+  font-size: 5vw;
+  font-family: "Modern No. 20";
+  text-transform: uppercase;
+  white-space: nowrap;
+  letter-spacing: 10px;
+  padding: 0 100px;
+  animation: move-rtl 20s linear infinite;
+  color: var(--accent-color);
+  opacity: 50%;
+}
+
+@keyframes move-rtl {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
