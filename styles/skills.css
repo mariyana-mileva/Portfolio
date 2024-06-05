@@ -6,7 +6,7 @@
 #skills-section .skills {
   width: 70%;
   margin: 0 auto; /* Center align the skills section */
-  text-align: left; /* Center align the heading */
+  text-align: center; /* Center align the heading */
 }
 
 #skills-section .skills h3 {
